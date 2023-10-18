@@ -1,20 +1,36 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { CadastroComponent } from './cadastro/cadastro.component';
-import { SucessoCadastroComponent } from './sucesso-cadastro/sucesso-cadastro.component';
-import { FormsModule } from '@angular/forms';
-import { MensagemErrorsComponent } from './components/mensagem-errors/mensagem-errors.component';
-import { MaiorIdadeDirective } from './directives/maior-idade.directive';
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { HeaderComponent } from "./components/header/header.component";
+import { FooterComponent } from "./components/footer/footer.component";
+import { CadastroComponent } from "./cadastro/cadastro.component";
+import { SucessoCadastroComponent } from "./sucesso-cadastro/sucesso-cadastro.component";
+import { FormsModule } from "@angular/forms";
+import { MensagemErrorsComponent } from "./components/mensagem-errors/mensagem-errors.component";
+import { MaiorIdadeDirective } from "./directives/maior-idade.directive";
 
+import { HttpClientModule } from "@angular/common/http";
+import { ValidandoCepDirective } from './directives/validando-cep.directive';
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, CadastroComponent, SucessoCadastroComponent, MensagemErrorsComponent, MaiorIdadeDirective],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    CadastroComponent,
+    SucessoCadastroComponent,
+    MensagemErrorsComponent,
+    MaiorIdadeDirective,
+    ValidandoCepDirective,
+  ],
+  imports: [
+    BrowserModule, 
+    AppRoutingModule, 
+    FormsModule, 
+    HttpClientModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
